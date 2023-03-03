@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container-app {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.main-app {
+  flex: 1;
+}
+
+.header-title-content {
+  color: var(--colors-grey-100);
+  margin-top: 90px;
+}
+
+.header-title {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-title .header-text {
+  margin-right: 10px;
+  font-size: 26px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.imagem-item {
+  position: relative;
+}
+
+.imagem-item img {
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.button-remove-image-content {
+  margin: 10px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  height: calc(100% - 23px);
+  background: var(--colors-hover-primary);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.btn.btn-remove-image {
+  display: flex;
+  min-width: 175px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  background: var(--colors-red);
+  color: var(--colors-grey-100);
+  /* padding: 5px; */
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.imagem-item:hover .button-remove-image-content {
+  display: flex;
+}
+
+.btn-remove-image .button-text {
+  margin-left: 5px;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn.btn-add-image {
+  display: flex;
+  align-items: center;
+  background: var(--colors-shape-tertiary);
+  color: var(--colors-grey-200);
+  border-radius: 5px;
+  padding: 7px 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.btn.btn-add-image:hover {
+  filter: brightness(120%);
+  transition: all 0.4s ease;
+}
+
+.btn.btn-add-image .button-text {
+  margin-left: 10px;
+  font-size: 0.875em;
+}
+
+.btn.btn-inactive {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.button-info {
+  color: var(--colors-red);
+  display: none;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 1.1em;
+}
+
+.button-info.info-active {
+  display: flex;
+}
+
+.button-info-text {
+  margin-right: 5px;
+  font-size: 0.875em;
+}
+
+@media (max-width: 576px) {
+  .main-container-app {
+    max-width: none;
+    margin-bottom: 90px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn.btn-add-image:hover {
+    filter: none;
+  }
+
+  .button-remove-image-content {
+    display: flex;
+  }
+}
+
+@media (max-width: 992px) {
+  .imagem-item img {
+    margin-bottom: 0;
+  }
+
+  .button-remove-image-content {
+    display: flex;
+    position: relative;
+    background: transparent;
+    margin: 0 10px;
+    margin-top: -3px;
+  }
+
+  .btn.btn-remove-image {
+    width: 100%;
+    min-width: none;
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-container-app {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-container-app {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-container-app {
+    max-width: 1320px;
   }
 }
