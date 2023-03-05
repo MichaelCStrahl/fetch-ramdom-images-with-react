@@ -7,12 +7,6 @@ const Image = ({ count }) => {
   return (
     <div className="imagem-item">
       <img src={url} alt="" />
-      
-      <div className="button-remove-image-content">
-        <button className="btn btn-remove-image" >
-          <RiDeleteBin6Fill /> <span className="button-text">Delete image</span>
-        </button>
-      </div>
     </div>
   )
 }

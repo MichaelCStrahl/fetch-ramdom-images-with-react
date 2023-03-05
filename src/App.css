@@ -43,52 +43,22 @@
   border-radius: 8px;
 }
 
-.button-remove-image-content {
-  margin: 10px;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(100% - 20px);
-  height: calc(100% - 23px);
-  background: var(--colors-hover-primary);
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-}
-
-.btn.btn-remove-image {
-  display: flex;
-  min-width: 175px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-  background: var(--colors-red);
-  color: var(--colors-grey-100);
-  /* padding: 5px; */
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.imagem-item:hover .button-remove-image-content {
-  display: flex;
-}
-
-.btn-remove-image .button-text {
-  margin-left: 5px;
-}
-
-.button-content {
+.main-button-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.btn.btn-add-image {
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.btn.btn-add-image,
+.btn.btn-reset {
   display: flex;
   align-items: center;
   background: var(--colors-shape-tertiary);
@@ -103,13 +73,20 @@
   overflow: hidden;
 }
 
-.btn.btn-add-image:hover {
+.btn.btn-add-image:hover,
+.btn.btn-reset:hover {
   filter: brightness(120%);
   transition: all 0.4s ease;
 }
 
 .btn.btn-add-image .button-text {
   margin-left: 10px;
+  font-size: 0.875em;
+}
+
+.btn.btn-reset {
+  color: var(--colors-red);
+  margin-left: 15px;
   font-size: 0.875em;
 }
 
@@ -135,38 +112,28 @@
   font-size: 0.875em;
 }
 
+.teste {
+  color: #fff;
+}
+
 @media (max-width: 576px) {
   .main-container-app {
     max-width: none;
     margin-bottom: 90px;
   }
 
-  .btn.btn-add-image:hover {
-    filter: none;
+  .header-title .header-text {
+    font-size: 20px;
   }
 
-  .button-remove-image-content {
-    display: flex;
+  .btn.btn-add-image:hover {
+    filter: none;
   }
 }
 
 @media (max-width: 992px) {
   .imagem-item img {
     margin-bottom: 0;
-  }
-
-  .button-remove-image-content {
-    display: flex;
-    position: relative;
-    background: transparent;
-    margin: 0 10px;
-    margin-top: -3px;
-  }
-
-  .btn.btn-remove-image {
-    width: 100%;
-    min-width: none;
-    margin: 0;
   }
 }
 
